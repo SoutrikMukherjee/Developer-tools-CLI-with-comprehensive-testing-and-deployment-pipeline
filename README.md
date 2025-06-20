@@ -8,9 +8,9 @@ DevForge is a powerful CLI tool that helps developers bootstrap new projects wit
 
 Complete File Structure
 
-tree -I "node_modules|dist|.git" -L 3 > structure.txt
 
-<pre> ```devforge/
+
+<pre> devforge/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml
@@ -69,4 +69,4 @@ tree -I "node_modules|dist|.git" -L 3 > structure.txt
 ├── vitest.config.ts
 ├── CHANGELOG.md
 ├── LICENSE
-└── README.md``` </pre>
+└── README.md </pre>
