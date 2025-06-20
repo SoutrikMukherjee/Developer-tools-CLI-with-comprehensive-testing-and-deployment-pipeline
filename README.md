@@ -99,3 +99,65 @@ A powerful and extensible CLI tool for bootstrapping modern development projects
 <prev>
 npm install -g devforge-cli </preov>
 
+# Contributing to DevForge CLI
+
+Thank you for your interest in contributing to DevForge! We welcome contributions from the community and are grateful for any help you can provide.
+
+## Code of Conduct
+
+By participating in this project, you agree to abide by our Code of Conduct. Please treat all contributors with respect and professionalism.
+
+## Getting Started
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/yourusername/devforge-cli.git`
+3. Install dependencies: `npm install`
+4. Create a new branch: `git checkout -b feature/your-feature-name`
+
+## Development Workflow
+
+1. Make your changes
+2. Add tests for new functionality
+3. Run tests: `npm test`
+4. Run linting: `npm run lint`
+5. Format code: `npm run format`
+6. Commit your changes using conventional commits
+7. Push to your fork
+8. Create a Pull Request
+
+## Commit Convention
+
+We use [Conventional Commits](https://www.conventionalcommits.org/):
+
+- `feat:` New features
+- `fix:` Bug fixes
+- `docs:` Documentation changes
+- `style:` Code style changes (formatting, etc)
+- `refactor:` Code refactoring
+- `test:` Test additions or modifications
+- `chore:` Build process or auxiliary tool changes
+
+Example: `feat: add support for Vue.js templates`
+
+## Testing
+
+- Write unit tests for all new functionality
+- Ensure all tests pass before submitting PR
+- Aim for high code coverage (>80%)
+- Include integration tests for CLI commands
+
+## Pull Request Guidelines
+
+1. Update documentation for any changed functionality
+2. Add an entry to CHANGELOG.md
+3. Ensure CI passes
+4. Request review from maintainers
+5. Address review feedback promptly
+
+## Development Tips
+
+### Running Locally
+
+```bash
+npm run dev -- create test-project
+
