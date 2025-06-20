@@ -1,275 +1,302 @@
-# Developer-tools-CLI-with-comprehensive-testing-and-deployment-pipeline
-
-DevForge CLI - Project Structure and Implementation Guide
-
-## Project Overview
-
-DevForge is a powerful CLI tool that helps developers bootstrap new projects with industry best practices, including testing setup, CI/CD pipelines, and modern tooling configurations.
-
-Complete File Structure
-
-
-
-<pre> devforge/
-├── .github/
-│   └── workflows/
-│       ├── ci.yml
-│       └── release.yml
-├── src/
-│   ├── commands/
-│   │   ├── init.ts
-│   │   ├── create.ts
-│   │   ├── template.ts
-│   │   └── plugin.ts
-│   ├── core/
-│   │   ├── config.ts
-│   │   ├── logger.ts
-│   │   ├── cache.ts
-│   │   ├── plugin-manager.ts
-│   │   └── template-engine.ts
-│   ├── templates/
-│   │   ├── node-typescript/
-│   │   ├── react-vite/
-│   │   └── express-api/
-│   ├── utils/
-│   │   ├── file-system.ts
-│   │   ├── git.ts
-│   │   ├── npm.ts
-│   │   └── validation.ts
-│   ├── plugins/
-│   │   ├── ai-docs/
-│   │   └── code-analysis/
-│   ├── types/
-│   │   └── index.ts
-│   └── index.ts
-├── tests/
-│   ├── unit/
-│   │   ├── commands/
-│   │   ├── core/
-│   │   └── utils/
-│   └── integration/
-│       ├── cli.test.ts
-│       └── templates.test.ts
-├── docs/
-│   ├── README.md
-│   ├── CONTRIBUTING.md
-│   ├── API.md
-│   └── PLUGINS.md
-├── examples/
-│   └── sample-project/
-├── scripts/
-│   ├── build.ts
-│   └── release.ts
-├── .eslintrc.json
-├── .prettierrc
-├── .gitignore
-├── .npmignore
-├── package.json
-├── tsconfig.json
-├── vitest.config.ts
-├── CHANGELOG.md
-├── LICENSE
-└── README.md </pre>
-
-# DevForge CLI
+# 🔥 DevForge CLI
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/devforge-cli.svg" alt="npm version" />
-  <img src="https://img.shields.io/npm/l/devforge-cli.svg" alt="license" />
-  <img src="https://img.shields.io/github/workflow/status/yourusername/devforge/CI" alt="build status" />
-  <img src="https://img.shields.io/codecov/c/github/yourusername/devforge" alt="coverage" />
+  <strong>Supercharge your development workflow with intelligent project scaffolding</strong>
 </p>
 
-A powerful and extensible CLI tool for bootstrapping modern development projects with industry best practices.
+<p align="center">
+  <em>Stop wasting hours on project setup. Start building what matters.</em>
+</p>
 
-## ✨ Features
+<p align="center">
+  <a href="https://www.npmjs.com/package/devforge-cli">
+    <img src="https://img.shields.io/npm/v/devforge-cli.svg?style=flat-square&color=brightgreen" alt="npm version" />
+  </a>
+  <a href="https://www.npmjs.com/package/devforge-cli">
+    <img src="https://img.shields.io/npm/dm/devforge-cli.svg?style=flat-square&color=blue" alt="npm downloads" />
+  </a>
+  <a href="https://github.com/yourusername/devforge-cli/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/yourusername/devforge-cli/ci.yml?branch=main&style=flat-square" alt="Build Status" />
+  </a>
+  <a href="https://codecov.io/gh/yourusername/devforge-cli">
+    <img src="https://img.shields.io/codecov/c/github/yourusername/devforge-cli?style=flat-square" alt="Code Coverage" />
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/npm/l/devforge-cli.svg?style=flat-square&color=orange" alt="License" />
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-Ready-blue?style=flat-square&logo=typescript" alt="TypeScript" />
+  </a>
+</p>
 
-- 🚀 **Quick Project Scaffolding** - Create new projects in seconds with pre-configured templates
-- 🎨 **Multiple Templates** - Support for Node.js, React, Express, and more
-- 🧪 **Testing Setup** - Preconfigured with Vitest for unit and integration testing
-- 🔧 **TypeScript Support** - First-class TypeScript support out of the box
-- 📦 **Smart Dependency Management** - Automatic dependency installation with caching
-- 🔌 **Plugin System** - Extend functionality with custom plugins
-- 🤖 **AI-Powered Features** - Intelligent documentation generation and code suggestions
-- 📊 **Progress Indicators** - Beautiful CLI interface with spinners and progress bars
-- ⚡ **Performance Optimized** - Built-in caching for faster subsequent runs
-- 🎯 **Interactive & Non-Interactive Modes** - Use with prompts or command-line flags
+<p align="center">
+  <a href="#-quick-start"><strong>🚀 Quick Start</strong></a> •
+  <a href="#-documentation"><strong>📖 Documentation</strong></a> •
+  <a href="#-why-devforge"><strong>🎯 Why DevForge?</strong></a> •
+  <a href="#-contributing"><strong>🤝 Contributing</strong></a>
+</p>
 
-## 📦 Installation
-<prev>
-npm install -g devforge-cli </preov>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yourusername/devforge-cli/main/demo.gif" alt="DevForge CLI Demo" width="680" />
+</p>
 
-# Contributing to DevForge CLI
+---
 
-Thank you for your interest in contributing to DevForge! We welcome contributions from the community and are grateful for any help you can provide.
+## 🎯 Why DevForge?
 
-## Code of Conduct
+> **"From idea to deployment in minutes, not hours"**
 
-By participating in this project, you agree to abide by our Code of Conduct. Please treat all contributors with respect and professionalism.
+Every developer knows the pain:
+- ⏰ **Hours wasted** on repetitive project setup
+- 🔧 **Inconsistent tooling** across different projects  
+- 📚 **Forgetting best practices** from previous projects
+- 🐛 **Copy-paste errors** that break builds
 
-## Getting Started
+**DevForge eliminates these problems** with intelligent, battle-tested project templates that include everything you need to start building immediately.
 
-1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/devforge-cli.git`
-3. Install dependencies: `npm install`
-4. Create a new branch: `git checkout -b feature/your-feature-name`
+## ✨ What Makes DevForge Special
 
-## Development Workflow
+| Feature | Description |
+|---------|-------------|
+| 🚀 **Lightning Fast Setup** | Complete project ready in < 30 seconds |
+| 🧠 **AI-Powered Intelligence** | Smart dependency analysis & code suggestions |
+| 🔌 **Extensible Plugin System** | Custom templates & community plugins |
+| 🛡️ **Production-Ready Defaults** | TypeScript, testing, CI/CD, linting included |
+| 🎨 **Multiple Project Types** | Node.js, React, Express, and custom templates |
+| ⚡ **Developer Experience** | Interactive prompts, progress indicators, caching |
 
-1. Make your changes
-2. Add tests for new functionality
-3. Run tests: `npm test`
-4. Run linting: `npm run lint`
-5. Format code: `npm run format`
-6. Commit your changes using conventional commits
-7. Push to your fork
-8. Create a Pull Request
+## 🚀 Quick Start
 
-## Commit Convention
+### Install DevForge CLI
 
-We use [Conventional Commits](https://www.conventionalcommits.org/):
+```bash
+# Install globally
+npm install -g devforge-cli
 
-- `feat:` New features
-- `fix:` Bug fixes
-- `docs:` Documentation changes
-- `style:` Code style changes (formatting, etc)
-- `refactor:` Code refactoring
-- `test:` Test additions or modifications
-- `chore:` Build process or auxiliary tool changes
+# Or use directly with npx
+npx devforge-cli --version
+```
 
-Example: `feat: add support for Vue.js templates`
+### Create Your First Project
 
-## Testing
+```bash
+# Interactive mode - guided setup
+devforge create my-awesome-app
 
-- Write unit tests for all new functionality
-- Ensure all tests pass before submitting PR
-- Aim for high code coverage (>80%)
-- Include integration tests for CLI commands
+# Quick mode - use defaults
+devforge create my-api --template express-api --skip-prompts
 
-## Pull Request Guidelines
+# Initialize existing project
+devforge init
+```
 
-1. Update documentation for any changed functionality
-2. Add an entry to CHANGELOG.md
-3. Ensure CI passes
-4. Request review from maintainers
-5. Address review feedback promptly
+### Available Templates
 
-## Development Tips
+```bash
+devforge template list
+```
 
-### Running Locally
+| Template | Description | Tech Stack |
+|----------|-------------|------------|
+| `node-typescript` | Node.js with TypeScript | Node.js, TypeScript, Vitest, ESLint |
+| `react-vite` | Modern React app | React, Vite, TypeScript, Tailwind CSS |
+| `express-api` | RESTful API server | Express, TypeScript, Jest, Swagger |
 
-bash
-npm run dev -- create test-project
+## 📚 Documentation
 
-### 2. **README.md for GitHub (Enhanced for Portfolio)**
-<div align="center">
-  <h1>🔥 DevForge CLI</h1>
-  <p><strong>Supercharge your development workflow with intelligent project scaffolding</strong></p>
-  
-  <p>
-    <a href="https://www.npmjs.com/package/devforge-cli">
-      <img src="https://img.shields.io/npm/v/devforge-cli.svg" alt="npm version" />
-    </a>
-    <a href="https://www.npmjs.com/package/devforge-cli">
-      <img src="https://img.shields.io/npm/dm/devforge-cli.svg" alt="npm downloads" />
-    </a>
-    <a href="https://github.com/yourusername/devforge-cli/actions">
-      <img src="https://github.com/yourusername/devforge-cli/workflows/CI/badge.svg" alt="Build Status" />
-    </a>
-    <a href="https://codecov.io/gh/yourusername/devforge-cli">
-      <img src="https://codecov.io/gh/yourusername/devforge-cli/branch/main/graph/badge.svg" alt="Code Coverage" />
-    </a>
-    <a href="https://github.com/yourusername/devforge-cli/blob/main/LICENSE">
-      <img src="https://img.shields.io/npm/l/devforge-cli.svg" alt="License" />
-    </a>
-  </p>
+### Core Commands
 
-  <p>
-    <a href="#-features">Features</a> •
-    <a href="#-quick-start">Quick Start</a> •
-    <a href="#-demo">Demo</a> •
-    <a href="#-why-devforge">Why DevForge</a> •
-    <a href="#-contributing">Contributing</a>
-  </p>
+```bash
+# Create new project
+devforge create <project-name> [options]
 
-  <img src="https://raw.githubusercontent.com/yourusername/devforge-cli/main/demo.gif" alt="DevForge Demo" width="600" />
-</div>
+# Initialize existing project  
+devforge init [options]
 
-## 🎯 Why I Built This
+# Manage templates
+devforge template <command>
 
-As a developer, I was frustrated by the repetitive nature of project setup. Every new project meant:
-- ⏰ Hours of boilerplate configuration
-- 🔧 Inconsistent tooling across projects  
-- 📚 Forgetting best practices
-- 🐛 Copy-paste errors from old projects
+# Manage plugins
+devforge plugin <command>
 
-**DevForge solves these problems** by providing intelligent, customizable project scaffolding with modern best practices built-in.
+# Show help
+devforge --help
+```
 
-## ✨ Features That Developers Love
+### Configuration
 
-### 🚀 **Instant Project Setup**
+Create a `devforge.config.js` file in your project root:
 
-devforge create my-app
+```javascript
+module.exports = {
+  templates: {
+    directory: './custom-templates'
+  },
+  plugins: [
+    '@devforge/ai-docs',
+    '@devforge/code-analysis'
+  ],
+  cache: {
+    enabled: true,
+    ttl: 3600
+  }
+}
+```
 
-### Changelog
+### Plugin Development
 
-All notable changes to this project will be documented in this file.
+```javascript
+// my-plugin.js
+module.exports = {
+  name: 'my-plugin',
+  version: '1.0.0',
+  hooks: {
+    'project:created': async (context) => {
+      // Your plugin logic here
+    }
+  }
+}
+```
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## 🌟 Examples
 
-### Added
-- Plugin system for extending functionality
-- AI-powered documentation generation
-- Caching system for improved performance
-- Interactive and non-interactive modes
+<details>
+<summary><strong>Creating a full-stack TypeScript project</strong></summary>
 
-### Changed
-- Improved error messages and logging
-- Enhanced template engine with Handlebars
+```bash
+devforge create my-fullstack-app
+```
 
-### Fixed
-- Git initialization on Windows
-- Template path resolution issues
+This creates:
+- ✅ TypeScript configuration
+- ✅ ESLint + Prettier setup  
+- ✅ Vitest testing framework
+- ✅ GitHub Actions CI/CD
+- ✅ Pre-commit hooks
+- ✅ Package.json with scripts
+- ✅ README with badges
+- ✅ License file
 
-### Added
-- `create` command for project scaffolding
-- `init` command for existing projects
-- `template` command for managing templates
-- `plugin` command for managing plugins
-- TypeScript support
-- Multiple built-in templates
-- Comprehensive test suite
-- CI/CD pipeline with GitHub Actions
-- Interactive prompts with Inquirer
-- Progress indicators with Ora
-- Colored output with Chalk
-- Logging system with Winston
-- Configuration management
-- Git integration
-- npm automation
+</details>
 
-[Unreleased]: https://github.com/yourusername/devforge-cli/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourusername/devforge-cli/releases/tag/v1.0.0
+<details>
+<summary><strong>Setting up a React project with Tailwind</strong></summary>
 
-### MIT License
+```bash
+devforge create my-react-app --template react-vite
+```
 
-Copyright (c) 2025 [Soutrik Mukherjee]
+Includes:
+- ⚡ Vite for blazing fast development
+- 🎨 Tailwind CSS for styling
+- 🧪 Vitest + React Testing Library
+- 📱 Responsive design templates
+- 🔧 TypeScript support
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+</details>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+<details>
+<summary><strong>Express API with OpenAPI documentation</strong></summary>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```bash
+devforge create my-api --template express-api
+```
+
+Features:
+- 🚀 Express.js server
+- 📝 OpenAPI/Swagger documentation
+- 🔐 JWT authentication setup
+- 🗄️ Database integration examples
+- 🧪 Comprehensive test suite
+
+</details>
+
+## 🔧 Advanced Usage
+
+### Custom Templates
+
+Create your own templates in `~/.devforge/templates/`:
+
+```
+my-template/
+├── template.json          # Template configuration
+├── {{project-name}}/     # Template files
+│   ├── package.json
+│   ├── src/
+│   └── tests/
+└── hooks/                # Template hooks
+    ├── pre-install.js
+    └── post-install.js
+```
+
+### Environment-Specific Configurations
+
+```bash
+# Development setup
+devforge create my-app --env development
+
+# Production-ready setup
+devforge create my-app --env production --ci github-actions
+```
+
+## 🤝 Contributing
+
+We love contributions! Here's how you can help:
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes** and add tests
+4. **Run the test suite**: `npm test`
+5. **Submit a pull request**
+
+### Development Setup
+
+```bash
+git clone https://github.com/yourusername/devforge-cli.git
+cd devforge-cli
+npm install
+npm run dev
+```
+
+### Running Tests
+
+```bash
+npm test              # Run all tests
+npm run test:unit     # Unit tests only
+npm run test:e2e      # Integration tests
+npm run test:watch    # Watch mode
+```
+
+## 📊 Project Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&repo=devforge-cli&show_icons=true&theme=dark" alt="GitHub Stats" />
+</p>
+
+## 🙏 Acknowledgments
+
+- Built with [TypeScript](https://www.typescriptlang.org/) for type safety
+- Powered by [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) for interactive prompts
+- Styled with [Chalk](https://github.com/chalk/chalk) for beautiful terminal output
+- Tested with [Vitest](https://vitest.dev/) for lightning-fast testing
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- [Documentation](https://devforge-cli.dev)
+- [npm Package](https://www.npmjs.com/package/devforge-cli)
+- [Issues](https://github.com/yourusername/devforge-cli/issues)
+- [Discussions](https://github.com/yourusername/devforge-cli/discussions)
+
+---
+
+<p align="center">
+  <strong>Made with ❤️ by developers, for developers</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/yourusername/devforge-cli">⭐ Star this project</a> if you find it helpful!
+</p>
