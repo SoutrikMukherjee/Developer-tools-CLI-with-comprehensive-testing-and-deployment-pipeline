@@ -161,7 +161,55 @@ Example: `feat: add support for Vue.js templates`
 bash
 npm run dev -- create test-project
 
-## **CHANGELOG.md**
+### 2. **README.md for GitHub (Enhanced for Portfolio)**
+<div align="center">
+  <h1>🔥 DevForge CLI</h1>
+  <p><strong>Supercharge your development workflow with intelligent project scaffolding</strong></p>
+  
+  <p>
+    <a href="https://www.npmjs.com/package/devforge-cli">
+      <img src="https://img.shields.io/npm/v/devforge-cli.svg" alt="npm version" />
+    </a>
+    <a href="https://www.npmjs.com/package/devforge-cli">
+      <img src="https://img.shields.io/npm/dm/devforge-cli.svg" alt="npm downloads" />
+    </a>
+    <a href="https://github.com/yourusername/devforge-cli/actions">
+      <img src="https://github.com/yourusername/devforge-cli/workflows/CI/badge.svg" alt="Build Status" />
+    </a>
+    <a href="https://codecov.io/gh/yourusername/devforge-cli">
+      <img src="https://codecov.io/gh/yourusername/devforge-cli/branch/main/graph/badge.svg" alt="Code Coverage" />
+    </a>
+    <a href="https://github.com/yourusername/devforge-cli/blob/main/LICENSE">
+      <img src="https://img.shields.io/npm/l/devforge-cli.svg" alt="License" />
+    </a>
+  </p>
+
+  <p>
+    <a href="#-features">Features</a> •
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-demo">Demo</a> •
+    <a href="#-why-devforge">Why DevForge</a> •
+    <a href="#-contributing">Contributing</a>
+  </p>
+
+  <img src="https://raw.githubusercontent.com/yourusername/devforge-cli/main/demo.gif" alt="DevForge Demo" width="600" />
+</div>
+
+## 🎯 Why I Built This
+
+As a developer, I was frustrated by the repetitive nature of project setup. Every new project meant:
+- ⏰ Hours of boilerplate configuration
+- 🔧 Inconsistent tooling across projects  
+- 📚 Forgetting best practices
+- 🐛 Copy-paste errors from old projects
+
+**DevForge solves these problems** by providing intelligent, customizable project scaffolding with modern best practices built-in.
+
+## ✨ Features That Developers Love
+
+### 🚀 **Instant Project Setup**
+
+devforge create my-app
 
 ### Changelog
 
