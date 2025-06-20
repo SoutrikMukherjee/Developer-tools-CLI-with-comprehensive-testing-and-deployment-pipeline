@@ -158,6 +158,51 @@ Example: `feat: add support for Vue.js templates`
 
 ### Running Locally
 
-```bash
+bash
 npm run dev -- create test-project
 
+## **CHANGELOG.md**
+
+### Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### Added
+- Plugin system for extending functionality
+- AI-powered documentation generation
+- Caching system for improved performance
+- Interactive and non-interactive modes
+
+### Changed
+- Improved error messages and logging
+- Enhanced template engine with Handlebars
+
+### Fixed
+- Git initialization on Windows
+- Template path resolution issues
+
+### [1.0.0] - 2024-01-15
+
+### Added
+- Initial release
+- `create` command for project scaffolding
+- `init` command for existing projects
+- `template` command for managing templates
+- `plugin` command for managing plugins
+- TypeScript support
+- Multiple built-in templates
+- Comprehensive test suite
+- CI/CD pipeline with GitHub Actions
+- Interactive prompts with Inquirer
+- Progress indicators with Ora
+- Colored output with Chalk
+- Logging system with Winston
+- Configuration management
+- Git integration
+- npm automation
+
+[Unreleased]: https://github.com/yourusername/devforge-cli/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/yourusername/devforge-cli/releases/tag/v1.0.0
