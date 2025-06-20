@@ -1,0 +1,35 @@
+import { Router } from 'express';
+import { body, validationResult } from 'express-validator';
+
+export const apiRouter = Router();
+
+// Example endpoint
+apiRouter.get('/users', (req, res) => {
+  res.json({
+    users: [
+      { id: 1, name: 'Alice' },
+      { id: 2, name: 'Bob' },
+    ],
+  });
+});
+
+// Example POST endpoint with validation
+apiRouter.post(
+  '/users',
+  [
+    body('name').isString().notEmpty().withMessage('Name is required'),
+    body('email').isEmail().withMessage('Valid email is required'),
+  ],
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    // Create user logic here
+    res.status(201).json({
+      id: Date.now(),
+      ...req.body,
+    });
+  }
+);
