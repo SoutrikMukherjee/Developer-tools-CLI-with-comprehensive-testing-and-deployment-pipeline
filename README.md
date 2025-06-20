@@ -185,7 +185,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Template path resolution issues
 
 ### Added
-- Initial release
 - `create` command for project scaffolding
 - `init` command for existing projects
 - `template` command for managing templates
