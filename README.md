@@ -70,3 +70,32 @@ Complete File Structure
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md </pre>
+
+# DevForge CLI
+
+<p align="center">
+  <img src="https://img.shields.io/npm/v/devforge-cli.svg" alt="npm version" />
+  <img src="https://img.shields.io/npm/l/devforge-cli.svg" alt="license" />
+  <img src="https://img.shields.io/github/workflow/status/yourusername/devforge/CI" alt="build status" />
+  <img src="https://img.shields.io/codecov/c/github/yourusername/devforge" alt="coverage" />
+</p>
+
+A powerful and extensible CLI tool for bootstrapping modern development projects with industry best practices.
+
+## ✨ Features
+
+- 🚀 **Quick Project Scaffolding** - Create new projects in seconds with pre-configured templates
+- 🎨 **Multiple Templates** - Support for Node.js, React, Express, and more
+- 🧪 **Testing Setup** - Preconfigured with Vitest for unit and integration testing
+- 🔧 **TypeScript Support** - First-class TypeScript support out of the box
+- 📦 **Smart Dependency Management** - Automatic dependency installation with caching
+- 🔌 **Plugin System** - Extend functionality with custom plugins
+- 🤖 **AI-Powered Features** - Intelligent documentation generation and code suggestions
+- 📊 **Progress Indicators** - Beautiful CLI interface with spinners and progress bars
+- ⚡ **Performance Optimized** - Built-in caching for faster subsequent runs
+- 🎯 **Interactive & Non-Interactive Modes** - Use with prompts or command-line flags
+
+## 📦 Installation
+<prev>
+npm install -g devforge-cli </preov>
+
