@@ -184,8 +184,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Git initialization on Windows
 - Template path resolution issues
 
-### [1.0.0] - 2024-01-15
-
 ### Added
 - Initial release
 - `create` command for project scaffolding
