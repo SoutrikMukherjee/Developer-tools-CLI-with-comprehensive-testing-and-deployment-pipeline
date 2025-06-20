@@ -50,3 +50,9 @@ jobs:
     - name: Build
       run: npm run build
       if: success()  # Only build if tests pass
+
+- name: Use Node.js ${{ matrix.node-version }}
+  uses: actions/setup-node@v4
+  with:
+    node-version: ${{ matrix.node-version }}
+    # cache: 'npm'  # <-- Comment out or remove this line
