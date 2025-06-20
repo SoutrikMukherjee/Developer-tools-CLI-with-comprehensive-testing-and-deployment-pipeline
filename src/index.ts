@@ -6,6 +6,11 @@ import { createCommand } from './commands/create.js';
 import { initCommand } from './commands/init.js';
 import { templateCommand } from './commands/template.js';
 import { pluginCommand } from './commands/plugin.js';
+import { configCommand } from './commands/config.js';
+import { doctorCommand } from './commands/doctor.js';
+import { extractCommand } from './commands/extract.js';
+import { deployCommand } from './commands/deploy.js';
+import { monitorCommand } from './commands/monitor.js';
 import { logger } from './core/logger.js';
 import { loadConfig } from './core/config.js';
 import { version } from '../package.json' assert { type: 'json' };
@@ -32,11 +37,16 @@ async function main() {
         }
       });
 
-    // Register commands
+    // Register all commands
     program.addCommand(createCommand);
     program.addCommand(initCommand);
     program.addCommand(templateCommand);
     program.addCommand(pluginCommand);
+    program.addCommand(configCommand);
+    program.addCommand(doctorCommand);
+    program.addCommand(extractCommand);
+    program.addCommand(deployCommand);
+    program.addCommand(monitorCommand);
 
     await program.parseAsync(process.argv);
   } catch (error) {
