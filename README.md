@@ -252,7 +252,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Unreleased]: https://github.com/yourusername/devforge-cli/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/yourusername/devforge-cli/releases/tag/v1.0.0
 
-MIT License
+### MIT License
 
 Copyright (c) 2024 [Soutrik Mukherjee]
 
