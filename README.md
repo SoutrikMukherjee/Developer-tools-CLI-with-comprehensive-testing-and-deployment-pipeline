@@ -254,7 +254,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### MIT License
 
-Copyright (c) 2024 [Soutrik Mukherjee]
+Copyright (c) 2025 [Soutrik Mukherjee]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
