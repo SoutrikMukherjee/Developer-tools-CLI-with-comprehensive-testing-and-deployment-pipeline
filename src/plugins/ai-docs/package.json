@@ -1,0 +1,14 @@
+{
+  "name": "devforge-plugin-ai-docs",
+  "version": "1.0.0",
+  "description": "AI-powered documentation generator for DevForge",
+  "main": "index.js",
+  "type": "module",
+  "devforge": {
+    "version": "1.0.0",
+    "hooks": ["afterCreate"]
+  },
+  "dependencies": {
+    "openai": "^4.24.1"
+  }
+}
